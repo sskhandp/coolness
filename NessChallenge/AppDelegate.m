@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "BlockMappingClass.h"
 
 @implementation AppDelegate
 
@@ -14,7 +15,26 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-  // Insert code here to initialize your application
+  BlockMappingClass *blockMappingClass = [[BlockMappingClass alloc] init];
+  [blockMappingClass setInputArray:[NSArray arrayWithObjects:[NSNumber numberWithInt:1],
+                                    [NSNumber numberWithInt:5],
+                                    [NSNumber numberWithInt:2],
+                                    [NSNumber numberWithInt:20],
+                                    [NSNumber numberWithInt:50],
+                                    [NSNumber numberWithInt:-1],
+                                    nil]];
+
+  [blockMappingClass setTrasnsformBlock:(id) ^(id input) {
+    NSLog(@"Mapping...%@", input);
+
+    NSNumber *number = [NSNumber numberWithInt: [(NSNumber*)input intValue] * 2];
+    return number;
+  }];
+
+  NSDictionary *mappedResult = [blockMappingClass mapAndReturnResult];
+  for (id key in mappedResult) {
+    NSLog(@"[%@, %@]", key, [mappedResult objectForKey:key]);
+  }
 }
 
 @end

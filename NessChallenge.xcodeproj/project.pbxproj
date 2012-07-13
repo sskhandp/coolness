@@ -13,6 +13,7 @@
 		59A7D18A15AD5F4900B9C7AB /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 59A7D18815AD5F4900B9C7AB /* Credits.rtf */; };
 		59A7D18D15AD5F4900B9C7AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A7D18C15AD5F4900B9C7AB /* AppDelegate.m */; };
 		59A7D19015AD5F4900B9C7AB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59A7D18E15AD5F4900B9C7AB /* MainMenu.xib */; };
+		59A7D19815AE93F000B9C7AB /* BlockMappingClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A7D19715AE93F000B9C7AB /* BlockMappingClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +22,16 @@
 		59A7D17C15AD5F4900B9C7AB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		59A7D17D15AD5F4900B9C7AB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		59A7D17E15AD5F4900B9C7AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		59A7D18115AD5F4900B9C7AB /* NessChallenge-Info.plist */ = {isa = PBXFileReference; path = "NessChallenge-Info.plist"; sourceTree = "<group>"; };
+		59A7D18115AD5F4900B9C7AB /* NessChallenge-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NessChallenge-Info.plist"; sourceTree = "<group>"; };
 		59A7D18315AD5F4900B9C7AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		59A7D18515AD5F4900B9C7AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		59A7D18715AD5F4900B9C7AB /* NessChallenge-Prefix.pch */ = {isa = PBXFileReference; path = "NessChallenge-Prefix.pch"; sourceTree = "<group>"; };
+		59A7D18715AD5F4900B9C7AB /* NessChallenge-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NessChallenge-Prefix.pch"; sourceTree = "<group>"; };
 		59A7D18915AD5F4900B9C7AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		59A7D18B15AD5F4900B9C7AB /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		59A7D18B15AD5F4900B9C7AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		59A7D18C15AD5F4900B9C7AB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		59A7D18F15AD5F4900B9C7AB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		59A7D19615AE93F000B9C7AB /* BlockMappingClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockMappingClass.h; sourceTree = "<group>"; };
+		59A7D19715AE93F000B9C7AB /* BlockMappingClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockMappingClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				59A7D18C15AD5F4900B9C7AB /* AppDelegate.m */,
 				59A7D18E15AD5F4900B9C7AB /* MainMenu.xib */,
 				59A7D18015AD5F4900B9C7AB /* Supporting Files */,
+				59A7D19615AE93F000B9C7AB /* BlockMappingClass.h */,
+				59A7D19715AE93F000B9C7AB /* BlockMappingClass.m */,
 			);
 			path = NessChallenge;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 			files = (
 				59A7D18615AD5F4900B9C7AB /* main.m in Sources */,
 				59A7D18D15AD5F4900B9C7AB /* AppDelegate.m in Sources */,
+				59A7D19815AE93F000B9C7AB /* BlockMappingClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
