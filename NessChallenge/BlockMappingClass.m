@@ -25,21 +25,21 @@
 
 -(NSDictionary*) mapAndReturnResult {
   NSMutableDictionary *mappedResults = [[NSMutableDictionary alloc] init];
-  dispatch_queue_t mappingQueue = dispatch_queue_create("ness.challenge.queue",
-                                                        DISPATCH_QUEUE_CONCURRENT);
-
+  dispatch_queue_t mappingQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+  dispatch_group_t group = dispatch_group_create();
+  
   for (id key in _inputArray) {
-    dispatch_async(mappingQueue, ^{
-      [mappedResults setObject:_transformBlock(key)
-                        forKey:key];
+    dispatch_group_async(group, mappingQueue, ^{
+      @synchronized(mappedResults) {
+        [mappedResults setObject:_transformBlock(key)
+                          forKey:key];
+      }
     });
   }
-  dispatch_barrier_sync(mappingQueue, ^{
-    NSLog(@"Barrier executed");
-    // no-op barrier block to wait until all the keys are mapped.
-  });
-
-  dispatch_release(mappingQueue);
+  dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
+  
+  // Release the group when it is no longer needed.
+  dispatch_release(group);
 
   return mappedResults;
 }
